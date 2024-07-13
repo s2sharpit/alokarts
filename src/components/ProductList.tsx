@@ -20,9 +20,9 @@ export default function ProductList({
     <Dialog>
       <DialogTrigger key={index}>
         <div className="flex flex-col items-center">
-          <div className="w-full grid place-items-center bg-secondary p-2">
+          <div className="w-full aspect-[7/8] grid place-items-center bg-secondary p-2">
             <Image
-              src={`/${index < 7 ? 1 : 2}.jpg`}
+              src={`/nameplate.webp`}
               alt=""
               width={120}
               height={120}
