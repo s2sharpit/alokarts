@@ -26,7 +26,7 @@ export default function Header() {
   }, []);
 
   return (
-    <nav className="z-10 md:flex justify-between fixed w-full h-max items-center py-4 px-8 lg:px-16 shadow-header bg-background /40 backdropblur-lg">
+    <nav className="z-10 md:flex justify-between fixed w-full h-max items-center py-4 px-8 lg:px-16 shadow-header bg-background/60 backdrop-blur-3xl">
       <Link
         href={"/"}
         onClick={() => handleClick("header")}

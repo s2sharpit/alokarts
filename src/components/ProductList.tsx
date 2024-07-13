@@ -8,6 +8,8 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { LuPhone } from "react-icons/lu";
+import Link from "next/link";
 
 export default function ProductList({
   data,
@@ -18,22 +20,22 @@ export default function ProductList({
 }) {
   return (
     <Dialog>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center backdrop-blur-3xl p-2 rounded-lg text-white border border-gray-400 bg-white/20">
         <DialogTrigger>
-          <div className="w-full aspect-[7/8] grid place-items-center bg-secondary p-2">
+          <div className="w-full aspect-[7/8] grid place-items-center">
             <Image
               src={`/nameplate.webp`}
               alt=""
               width={120}
               height={120}
-              className=""
+              className="rounded-lg"
             />
           </div>
         </DialogTrigger>
         <span className="text-center">
           {data.name}
           <br />
-          <span className="text-sm text-gray-500">₹{data.price}</span>
+          <span className="text-sm text-gray-100">₹{data.price}</span>
         </span>
       </div>
       <DialogContent>
@@ -58,6 +60,12 @@ export default function ProductList({
             </div>
           </DialogDescription>
         </DialogHeader>
+        <Link
+          href={"tel:7667976507"}
+          className="justify-normal flex items-center gap-2"
+        >
+          Contact <LuPhone />
+        </Link>
       </DialogContent>
     </Dialog>
   );

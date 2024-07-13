@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className=" p-8 pb-2 sm:px-20 borderborder-t-border bg-secondary"
+      className=" p-8 pb-2 sm:px-20 backdrop-blur-3xl bg-white/50"
     >
       <div className="flex max-md:flex-wrap gap-8 md:gap-16">
         <div className="max-w-md">
