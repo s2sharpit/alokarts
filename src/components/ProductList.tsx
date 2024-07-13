@@ -18,8 +18,8 @@ export default function ProductList({
 }) {
   return (
     <Dialog>
-      <DialogTrigger key={index}>
-        <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center">
+        <DialogTrigger>
           <div className="w-full aspect-[7/8] grid place-items-center bg-secondary p-2">
             <Image
               src={`/nameplate.webp`}
@@ -29,19 +29,33 @@ export default function ProductList({
               className=""
             />
           </div>
-          <span className="text-center">
-            {data.name}
-            <br />
-            <span className="text-sm text-gray-500">₹{data.price}</span>
-          </span>
-        </div>
-      </DialogTrigger>
+        </DialogTrigger>
+        <span className="text-center">
+          {data.name}
+          <br />
+          <span className="text-sm text-gray-500">₹{data.price}</span>
+        </span>
+      </div>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Are you absolutely sure?</DialogTitle>
+          <DialogTitle className="capitalize">{data.name}</DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will permanently delete your
-            account and remove your data from our servers.
+            <p className="mb-4 text-sm">₹{data.price}</p>
+            <div className="flex gap-6">
+              <p className="text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis
+                at doloribus voluptate et repellat natus rerum exercitationem
+                earum non reiciendis! Illum molestiae voluptatibus earum
+                suscipit perferendis rem temporibus labore vero.
+              </p>
+              <Image
+                src={`/nameplate.webp`}
+                alt=""
+                width={200}
+                height={200}
+                className="rounded-lg"
+              />
+            </div>
           </DialogDescription>
         </DialogHeader>
       </DialogContent>
