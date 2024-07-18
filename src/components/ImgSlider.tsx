@@ -11,7 +11,7 @@ export default function ImgSlider() {
   return (
     <Section>
       <Swiper
-        className="h-full rounded-2xl overflow-hidden max-md:pt-8 md:w-4/5 border border-gray-400"
+        className="h-full rounded-2xl overflow-hidden max-md:mt-8 md:w-4/5 border border-gray-400"
         loop={true}
         modules={[Autoplay, Navigation, Pagination, A11y]}
         spaceBetween={24}
